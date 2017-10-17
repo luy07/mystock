@@ -8,17 +8,12 @@
 # @author luy(luy007@msn.cn)
 #
 ######################################################################
-class stockDaily(object):
-    gid=0
-    price=0
-    openPri=0
-    closePri=0
-    highPri=0
-    lowPri=0
-    volume=0
-    date=''
-    positive=0      #
+from demo import sinaStockRequestor
+from models import stockSnapshot
 
-    def prt(self):
-        for name in self.__dict__:
-            print(name)
+data=sinaStockRequestor.getStockCurrent('sh603129')
+
+for item in data:
+    print(item)
+
+
