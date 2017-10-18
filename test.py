@@ -8,13 +8,13 @@
 # @author luy(luy007@msn.cn)
 #
 ######################################################################
-from demo import sinaStockRequestor
-from dbmodels import stockSnapshotDB,factory
+import sys
 
-factory.commitSession()
-#data=sinaStockRequestor.getStockCurrent('sh603129')
+class car:
+    price=1
 
-#for item in data:
-#    print(item)
+    def __init__(self):
+        self['price']=999
 
-
+    def __setitem__(self,**kv):
+        :
