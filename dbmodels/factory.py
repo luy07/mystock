@@ -15,13 +15,13 @@ from sqlalchemy.orm import sessionmaker
 Base=declarative_base()
 engine = create_engine('sqlite:///:memory:')
 
-def createSession():
+def getSession():
     DBsession=sessionmaker(bind=engine)
     session=DBsession()
     return session
 
 def createSchema():
     Base.metadata.create_all(engine)
-    session=createSession()
+    session=getSession()
     session.commit()
 

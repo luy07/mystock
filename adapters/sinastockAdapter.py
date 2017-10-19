@@ -8,13 +8,7 @@
 # @author luy(luy007@msn.cn)
 #
 ######################################################################
-from requestors import sinaStockRequestor
-from dbmodels import stockMinutely,factory
-
-factory.createSchema()
-#data=sinaStockRequestor.getStockCurrent('sh603129')
-
-#for item in data:
-#    print(item)
-
+import sys
+sys.path.insert('..')
+from models import stock
 

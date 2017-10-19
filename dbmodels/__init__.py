@@ -1,1 +1,1 @@
-from stockSnapshotDB import *
+from stockMinutely import stockMinutely
