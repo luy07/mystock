@@ -9,15 +9,15 @@ import factory
 class stockMinutely(factory.Base):
     '''present a stock snapshot'''
     __tablename__='stockMinutely'
-    gid=Column(String,primary_key=True)					#股票编号
-    increPer=Column(Float)              #涨跌百分比
-    increase=Column(String)              #涨跌额
+    gid=Column(String(10),primary_key=True)					#股票编号
     name=Column(String(10))             #股票名称
-    todayStartPri=Column(Float)			#今日开盘价
-    yestodEndPri=Column(Float)			#昨日收盘价
+    increPer=Column(Float)              #涨跌百分比
+    increase=Column(Float)              #涨跌额
+    openPri=Column(Float)			#今日开盘价
+    yesterdayPri=Column(Float)			#昨日收盘价
     nowPri=Column(Float)				#当前价格
-    todayMax=Column(Float)				#今日最高价
-    todayMin=Column(Float)				#今日最低价
+    highPri=Column(Float)				#今日最高价
+    lowPri=Column(Float)				#今日最低价
     competitivePri=Column(Float)		#竞买价
     reservePri=Column(Float)			#竞卖价
     traNumber=Column(Integer)			#成交量

@@ -13,7 +13,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 Base=declarative_base()
-engine = create_engine('sqlite:///:memory:')
+engine = create_engine('mysql+mysqldb://root:111111@localhost/mystock?charset=utf8')
 
 def getSession():
     DBsession=sessionmaker(bind=engine)

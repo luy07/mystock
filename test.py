@@ -8,13 +8,20 @@
 # @author luy(luy007@msn.cn)
 #
 ######################################################################
-import sys
+from models import stockSnapshot
+from requestors import sinaStockRequestor
+from  dbmodels import factory,stockMinutely
 
-class car:
-    price=1
+list=sinaStockRequestor.getStockCurrent('sh600001')
 
-    def __init__(self):
-        self['price']=999
 
-    def __setitem__(self,**kv):
-        :
+
+for item in list:
+
+    session=factory.getSession()
+
+    stockN=stockSnapshot()
+
+
+    stockM=stockMinutely()
+

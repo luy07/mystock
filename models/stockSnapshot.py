@@ -3,14 +3,14 @@
 class stockSnapshot(object):
     '''present a stock snapshot'''
     gid=''					#股票编号
-    increPer=0              #涨跌百分比
+    increPer=0             #涨跌百分比
     increase=0              #涨跌额
     name=''                 #股票名称
-    todayStartPri=0			#今日开盘价
-    yestodEndPri=0			#昨日收盘价
+    openPri=0		    	#今日开盘价
+    yesterdayPri=0		    #昨日收盘价
     nowPri=0				#当前价格
-    todayMax=0				#今日最高价
-    todayMin=0				#今日最低价
+    highPri=0				#今日最高价
+    lowPri=0				#今日最低价
     competitivePri=0		#竞买价
     reservePri=0			#竞卖价
     traNumber=0				#成交量
@@ -39,7 +39,7 @@ class stockSnapshot(object):
     time=''                 #时间
 
     def __init__(self):
-       self.testa=1
+       pass
 
     def __str__(self):
        print(u'''股票编号:%s
